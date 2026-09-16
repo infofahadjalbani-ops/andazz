@@ -32,6 +32,7 @@ The .env.example contains names only, no working passwords or credentials.
 
 Open https://YOUR-VERCEL-DOMAIN/admin/login and use ADMIN_EMAIL + ADMIN_PASSWORD above. This login does not use ChatGPT.
 The configured account is the protected OWNER. From Orders, select MANAGE ADMINS to add admins by email and a password of at least 12 characters, or delete them after confirmation.
+Admin links are intentionally absent from the public storefront. Bookmark /admin/login to access your portal; order APIs still require authenticated admin access.
 Additional admins use the same /admin/login URL and can view/update orders. Only the owner can list, add or delete admins. Share initial passwords privately; no invitation email is sent.
 Admins are stored in the same Upstash database with salted password hashes. Deleting an admin revokes their session on their next request, without deleting any orders. Re-adding the same email creates a fresh identity and does not reactivate old sessions.
 Keep the same Upstash environment variables when redeploying to retain admins and orders. Existing sessions from the previous ZIP must sign in again once after this update.
@@ -51,5 +52,6 @@ Dependencies and generated build output are intentionally not zipped; Vercel ins
 ## Validation
 
 Next.js production build and TypeScript checks were run locally. No Vercel account deployment or real Upstash credentials are included. End-to-end order persistence must be tested after setting your own keys.
+The responsive update fixes shrinking mobile product cards, narrow navigation, cart and checkout layout. Browser-based visual checks could not run in this environment because the browser download timed out. Check the deployed version on your phone before accepting customers.
 
 References: https://vercel.com/docs/deployments and https://upstash.com/docs/redis/features/restapi
