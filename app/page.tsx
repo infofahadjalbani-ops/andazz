@@ -17,9 +17,9 @@ export default function Home() {
     <>
       <style dangerouslySetInnerHTML={{ __html: style }} />
       <link rel="stylesheet" href="/store.css?v=8" />
-      <link rel="stylesheet" href="/mobile.css?v=1" />
+      <link rel="stylesheet" href="/mobile.css?v=3" />
       <div id="storeRoot" dangerouslySetInnerHTML={{ __html: body }} />
-      <Script src="/app.js?v=7" strategy="afterInteractive" />
+      <Script src="/app.js?v=10" strategy="afterInteractive" />
     </>
   );
 }

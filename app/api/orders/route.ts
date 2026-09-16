@@ -18,6 +18,7 @@ type OrderInput = {
 const clean = (value: unknown, max = 250) => typeof value === "string" ? value.trim().slice(0, max) : "";
 
 export async function POST(request: Request) {
+  if(request.headers.get("origin") && request.headers.get("origin")!==new URL(request.url).origin) return Response.json({error:"Forbidden"},{status:403});
   try {
     const body = await request.json() as OrderInput;
     const customerName = clean(body.customerName, 100);

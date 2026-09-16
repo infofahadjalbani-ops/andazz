@@ -38,7 +38,7 @@ Admins are stored in the same Upstash database with salted password hashes. Dele
 Keep the same Upstash environment variables when redeploying to retain admins and orders. Existing sessions from the previous ZIP must sign in again once after this update.
 Order records use Upstash keys beginning andazz:. They have no automatic expiry; retention depends on keeping your database/account active and within limits. Back up records through your database provider.
 Old orders on the ChatGPT-hosted site are not migrated by this ZIP. This deployment starts with the records in your selected Upstash database.
-Orders page shows the latest 250 orders. Refresh it to see newly received orders. There are no email/WhatsApp/push notifications in this version.
+Orders page shows the latest 250 orders. Total, New, Confirmed, Shipped, Completed and Canceled cards count these displayed orders and update when an order status changes. Refresh it to see newly received orders. There are no email/WhatsApp/push notifications in this version.
 
 Bank transfer is MANUAL: customer transfers to Meezan Bank Limited / Fahad Hussain / 10250110527313, then enters a reference. The site does not debit cards or verify receipt from the bank. Verify funds yourself before confirming a transfer order.
 Delivery/returns policy, actual stock availability and catalogue expansion still require owner input. The existing Everyday Essentials tab currently shows an unavailable message; no additional products have been invented.
