@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="ANDAZZ — Gen-Z streetwear. Oversized tees, hoodies, sweatshirts and cargos." />
+  <title>ANDAZZ — Wear Your Story</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>:root{--ink:#0b0b0b;--paper:#e9e9e7;--red:#b31219;--line:#bbb;--white:#f6f6f3}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}button{font:inherit}
+.announcement{background:var(--red);color:white;text-align:center;padding:8px;font-size:12px;font-weight:700;letter-spacing:.16em}
+.nav{height:74px;display:flex;align-items:center;justify-content:space-between;padding:0 2.5vw;border-bottom:1px solid #aaa;position:absolute;top:31px;z-index:5;width:100%;color:white;mix-blend-mode:difference}.wordmark{font-family:"Archivo Black";font-size:26px}.nav-links{display:flex;gap:28px;font-size:13px;font-weight:700;letter-spacing:.12em}.bag{border:1px solid currentColor;background:transparent;color:inherit;padding:10px 14px;border-radius:999px;font-size:12px;font-weight:700}.bag span{background:currentColor;color:#111;border-radius:50%;display:inline-grid;place-items:center;width:18px;height:18px;margin-left:7px}
+.hero{height:min(860px,calc(100vh - 31px));min-height:650px;position:relative;display:grid;place-items:center;background:#c9c9c8;overflow:hidden}.hero img{position:absolute;width:100%;height:100%;object-fit:cover;z-index:1;filter:contrast(1.05)}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.12),transparent 34%,rgba(0,0,0,.12));z-index:2}.hero-copy{position:absolute;z-index:2;text-align:center;top:18%;width:100%}.eyebrow{font-size:12px;font-weight:700;letter-spacing:.2em}.hero-copy .eyebrow{color:white}.hero h1{font-family:"Archivo Black";font-size:clamp(84px,16vw,260px);line-height:.72;margin:38px 0 0;letter-spacing:-.075em;color:#eee;mix-blend-mode:difference}.hero-copy p{font-size:16px;color:#111;margin-top:40px}.shop-pill{position:absolute;z-index:3;bottom:42px;left:50%;transform:translateX(-50%);background:var(--red);color:white;padding:16px 18px 16px 24px;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:.12em}.shop-pill span{font-size:20px;margin-left:24px}.hero-note{position:absolute;z-index:3;bottom:42px;font-family:"Archivo Black";font-size:13px;line-height:.95}.hero-note.left{left:2.5vw}.hero-note.right{right:2.5vw;text-align:right}
+.ticker{background:#090909;color:white;overflow:hidden;white-space:nowrap;border-block:1px solid #333}.ticker div{display:inline-block;padding:19px 0;font-family:"Archivo Black";font-size:25px;letter-spacing:.05em;animation:ticker 23s linear infinite}.ticker b{color:var(--red)}@keyframes ticker{to{transform:translateX(-50%)}}
+.categories{padding:110px 0 120px;background:var(--paper)}.section-head{display:flex;align-items:flex-end;justify-content:space-between;padding:0 4vw 55px}.section-head h2,.manifesto h2{font-family:"Archivo Black";font-size:clamp(48px,7vw,110px);line-height:.83;letter-spacing:-.06em;margin:22px 0 0}.section-head p{font-size:14px;line-height:1.6;text-align:right}.rail-wrap{position:relative}.product-rail{display:flex;gap:18px;overflow-x:auto;padding:0 4vw 18px;scroll-snap-type:x mandatory;scrollbar-width:none;cursor:grab}.product-rail::-webkit-scrollbar{display:none}.product-card{min-width:min(350px,76vw);scroll-snap-align:start;border:1px solid #bdbdbd;background:#dededc}.product-shot{height:440px;overflow:hidden;background:#ccc;position:relative}.product-shot:before{content:"";position:absolute;left:50%;top:0;height:48px;border-left:1px solid #222;z-index:2}.product-shot img{height:100%;width:100%;object-fit:cover;object-position:center;filter:saturate(.82);transition:.55s transform}.product-card:hover img{transform:scale(1.035)}.new-tag{position:absolute;z-index:3;top:18px;left:18px;background:var(--red);color:white;border-radius:999px;padding:8px 12px;font-size:11px;font-weight:700;letter-spacing:.1em}.product-info{display:flex;justify-content:space-between;align-items:flex-end;padding:23px 22px 26px}.product-info h3{font-family:"Archivo Black";font-size:28px;line-height:.9;margin:0}.product-info span{font-weight:700}.rail-next{position:absolute;right:2.2vw;top:45%;width:64px;height:64px;border:0;border-radius:50%;background:var(--red);color:white;font-size:28px;z-index:3;cursor:pointer}
+.manifesto{min-height:920px;background:#111;color:white;display:grid;grid-template-columns:1fr minmax(340px,600px);align-items:center;gap:5vw;padding:8vw;position:relative;overflow:hidden}.manifesto:before{content:"ANDAZZ ANDAZZ ANDAZZ";position:absolute;font-family:"Archivo Black";font-size:15vw;color:#191919;white-space:nowrap;transform:rotate(-12deg);left:-5%;top:32%}.manifesto-copy{position:relative;z-index:2}.manifesto h2 i{color:var(--red);font-style:normal}.manifesto-copy p{font-size:18px}.editorial{position:relative;z-index:2;transform:rotate(2deg);border:8px solid #ecebe6;box-shadow:18px 18px 0 var(--red)}.editorial img{width:100%;display:block;aspect-ratio:4/5;object-fit:cover}.editorial span{position:absolute;bottom:20px;left:-35px;background:#eee;color:#111;font-family:"Archivo Black";font-size:28px;padding:10px 18px;transform:rotate(-4deg)}.stamp{position:absolute;right:3vw;top:6vw;border:2px solid var(--red);color:var(--red);padding:13px;text-align:center;font-weight:700;font-size:11px;letter-spacing:.16em;transform:rotate(9deg)}
+.best-sellers{background:#f5f5f3;padding:105px 3vw 80px;border-bottom:1px solid #bbb}.best-head{display:flex;align-items:flex-end;justify-content:space-between}.best-head h2{font-family:"Archivo Black";font-size:clamp(58px,8vw,130px);line-height:.8;letter-spacing:-.06em;margin:25px 0 0}.best-head>a{border-bottom:2px solid #111;padding:8px 0;font-size:13px;font-weight:700;letter-spacing:.12em}.best-head>a span{margin-left:25px}.collection-tabs{display:flex;gap:12px;margin:48px 0 38px}.collection-tabs button{border:1px solid #d4d4d4;background:#eaeae8;border-radius:999px;padding:15px 24px;font-size:12px;font-weight:700;letter-spacing:.06em}.collection-tabs button.active{background:#111;color:white;border-color:#111}.seller-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.seller-image{display:block;position:relative;overflow:hidden;background:#e5e5e5;border-radius:22px}.seller-image img{width:100%;display:block;aspect-ratio:4/5;object-fit:cover;transition:transform .45s ease}.seller-card:hover .seller-image img{transform:scale(1.035)}.save{position:absolute;top:18px;left:18px;z-index:2;background:var(--red);color:#fff;border-radius:999px;padding:9px 12px;font-size:11px;font-weight:700}.quick{position:absolute;right:16px;bottom:16px;background:rgba(10,10,10,.78);color:white;border-radius:999px;padding:11px 14px;font-size:11px;font-weight:700;opacity:0;transform:translateY(8px);transition:.25s}.seller-card:hover .quick{opacity:1;transform:none}.seller-meta{display:flex;justify-content:space-between;gap:16px;padding:18px 2px 26px}.seller-meta h3{font-size:15px;margin:0;max-width:58%}.seller-meta div{text-align:right;white-space:nowrap}.seller-meta strong{display:block;color:var(--red);font-size:14px}.seller-meta del{font-size:12px;color:#777}.seller-values{border-top:1px solid #bbb;padding-top:25px;display:flex;justify-content:space-around;font-family:"Archivo Black";font-size:14px}
+.drop-banner{min-height:720px;position:relative;background:#d84c12;overflow:hidden;display:grid;grid-template-columns:1.15fr 1fr;align-items:center}.drop-banner>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.drop-copy{position:relative;z-index:2;grid-column:2;padding:8vw 7vw 8vw 4vw;color:#111}.drop-copy h2{font-family:"Archivo Black";font-size:clamp(62px,8vw,130px);line-height:.8;letter-spacing:-.065em;margin:25px 0}.drop-copy h2 i{font-style:normal;color:var(--white);text-shadow:3px 3px 0 var(--red)}.drop-copy p{font-size:16px;line-height:1.6}.drop-copy a{display:inline-flex;align-items:center;gap:32px;margin-top:24px;border:2px solid #111;border-radius:999px;padding:14px 18px 14px 24px;font-size:13px;font-weight:700;letter-spacing:.1em}
+footer{background:var(--red);color:#080808;padding:55px 3vw 22px}.footer-kicker{border-bottom:2px solid #111;padding-bottom:16px;margin-bottom:38px;font-family:"Archivo Black";font-size:clamp(15px,1.5vw,24px);white-space:nowrap;overflow:hidden}.footer-top{display:grid;grid-template-columns:1fr 1fr 1fr;font-weight:600;font-size:13px}.footer-top div{display:flex;gap:25px;justify-content:center}.footer-top p:last-child{text-align:right}.footer-logo{font-family:"Archivo Black";font-size:clamp(92px,19vw,310px);line-height:.82;text-align:center;letter-spacing:-.07em;margin:70px 0 30px}.footer-line{border-top:2px solid #080808;padding-top:12px;display:flex;justify-content:space-between;font-weight:700;letter-spacing:.12em}
+@media(max-width:900px){.seller-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.nav{height:62px;padding-inline:18px}.nav-links{display:none}.hero{min-height:680px;height:90vh}.hero img{object-position:center}.hero-copy{top:21%}.hero h1{font-size:22vw;margin-top:30px}.hero-copy p{font-size:13px}.section-head{align-items:flex-start;padding-inline:20px}.section-head p{display:none}.categories{padding:75px 0}.product-shot{height:380px}.manifesto{grid-template-columns:1fr;padding:100px 24px;gap:70px}.manifesto h2{font-size:20vw}.stamp{top:25px}.best-sellers{padding:78px 18px 55px}.best-head{align-items:flex-start}.best-head h2{font-size:16vw}.best-head>a{display:none}.collection-tabs{overflow-x:auto;margin:36px 0 25px}.collection-tabs button{white-space:nowrap}.seller-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:14px}.seller-card{min-width:78vw;scroll-snap-align:start}.seller-values{justify-content:flex-start;gap:36px;overflow:hidden;white-space:nowrap}.drop-banner{min-height:790px;grid-template-columns:1fr;align-items:end}.drop-banner>img{object-position:36% center}.drop-banner:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,#d84c12 55%)}.drop-copy{grid-column:1;padding:80px 24px 55px;z-index:3}.drop-copy h2{font-size:19vw}.footer-top{grid-template-columns:1fr 1fr}.footer-top div{justify-content:flex-end}.footer-top p:last-child{display:none}.footer-logo{margin-top:60px}.rail-next{width:52px;height:52px}.hero-note{font-size:10px}.shop-pill{white-space:nowrap}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}.ticker div{animation:none}}
+.seller-image{background:#f2f1ed;border:1px solid #ddd}.seller-image img{object-position:center}
+.hero-mobile{display:none}
+.ticker{position:relative;background:transparent;color:#f5f5f1;border:0;padding:8px 0;isolation:isolate}.ticker:before{content:"";position:absolute;inset:0 -2%;z-index:-1;background:#0a0a0a;clip-path:polygon(0 9%,4% 2%,9% 10%,14% 1%,19% 8%,25% 0,30% 9%,35% 3%,41% 10%,47% 1%,53% 8%,59% 0,65% 9%,71% 2%,77% 10%,84% 1%,90% 8%,96% 0,100% 7%,100% 91%,96% 100%,90% 92%,84% 99%,78% 91%,71% 100%,65% 92%,59% 98%,53% 90%,47% 100%,41% 92%,35% 99%,29% 91%,23% 100%,17% 92%,10% 99%,5% 90%,0 97%)}.ticker div{padding:14px 0;font-size:22px;text-shadow:1px 1px 0 #000}.ticker div>span{font-size:34px;color:transparent;-webkit-text-stroke:1px var(--red);font-style:italic;margin:0 20px}.ticker b{font-style:italic;margin-inline:10px}
+.tv-footer{height:min(900px,90vh);min-height:650px;padding:0;position:relative;overflow:hidden;background:#080706;color:white}.tv-footer>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.tv-footer .footer-mobile{display:none}.tv-footer:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.55),transparent 55%),linear-gradient(0deg,rgba(0,0,0,.75),transparent 32%)}.tv-footer-top,.tv-footer-links,.tv-footer-copy{position:absolute;z-index:2}.tv-footer-top{top:28px;left:3vw;right:3vw;display:flex;justify-content:space-between;font-size:12px;font-weight:700;letter-spacing:.15em}.tv-footer-copy{left:4vw;top:50%;transform:translateY(-50%)}.tv-footer-copy h2{font-family:"Archivo Black";font-size:clamp(55px,7vw,115px);line-height:.82;letter-spacing:-.06em;margin:22px 0 0}.tv-footer-copy h2 i{font-style:normal;color:var(--red)}.tv-footer-links{left:3vw;right:3vw;bottom:25px;display:flex;gap:28px;border-top:1px solid rgba(255,255,255,.5);padding-top:18px;font-size:12px;font-weight:700;letter-spacing:.12em}.tv-footer-links span{margin-left:auto}
+@media(max-width:700px){.hero .hero-desktop{display:none}.hero .hero-mobile{display:block;object-fit:cover;object-position:center}.hero-copy{top:17%}.hero-copy p{color:#111;background:rgba(238,238,235,.72);display:inline-block;padding:5px 9px;border-radius:3px}.ticker div{font-size:17px}.ticker div>span{font-size:26px}.tv-footer{height:100svh;min-height:760px;max-height:920px}.tv-footer .footer-desktop{display:none}.tv-footer .footer-mobile{display:block;object-fit:cover;object-position:center}.tv-footer-top{top:24px;left:18px;right:18px;font-size:10px}.tv-footer-copy{top:88px;left:18px;right:18px;transform:none}.tv-footer-copy .eyebrow{font-size:10px}.tv-footer-copy h2{font-size:clamp(42px,12vw,58px);line-height:.86;margin-top:14px}.tv-footer-links{left:18px;right:18px;bottom:20px;gap:14px;flex-wrap:wrap;font-size:10px}.tv-footer-links span{width:100%;margin-left:0}.tv-footer:after{background:linear-gradient(180deg,rgba(0,0,0,.68),transparent 35%,rgba(0,0,0,.82))}}
+.bag{cursor:pointer}.cart-open{overflow:hidden}.cart-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.62);z-index:20;opacity:0;transition:opacity .25s}.cart-backdrop.show{opacity:1}.cart-drawer{position:fixed;z-index:21;right:0;top:0;width:min(470px,100%);height:100dvh;background:#f5f5f3;display:flex;flex-direction:column;transform:translateX(105%);transition:transform .35s cubic-bezier(.22,.8,.2,1);box-shadow:-18px 0 50px rgba(0,0,0,.2)}.cart-drawer.open{transform:none}.cart-head{background:#111;color:white;padding:28px 25px 22px;display:flex;justify-content:space-between;align-items:flex-start}.cart-head h2{font-family:"Archivo Black";font-size:32px;line-height:1;margin:12px 0 0}.cart-close{border:1px solid #777;background:transparent;color:white;border-radius:50%;width:43px;height:43px;font-size:28px;line-height:1;cursor:pointer}.cart-items{overflow:auto;padding:10px 24px}.cart-empty{margin:auto;padding:35px;text-align:center;display:grid;gap:10px}.cart-empty strong{font-family:"Archivo Black";font-size:25px}.cart-empty span{font-size:14px;color:#666}.cart-empty[hidden]{display:none}.cart-item{display:grid;grid-template-columns:90px 1fr auto;gap:14px;padding:16px 0;border-bottom:1px solid #ccc;align-items:center}.cart-item img{width:90px;height:115px;object-fit:cover;background:#ddd}.cart-item-info{display:grid;gap:8px}.cart-item-info>strong{font-size:13px}.cart-item-info>span{color:var(--red);font-weight:700}.qty{display:flex;align-items:center;width:max-content;border:1px solid #aaa}.qty button{border:0;background:transparent;width:31px;height:30px;font-size:18px;cursor:pointer}.qty b{min-width:25px;text-align:center;font-size:12px}.remove-item{align-self:end;border:0;border-bottom:1px solid #111;background:transparent;padding:2px 0;font-size:10px;font-weight:700;cursor:pointer}.cart-footer{margin-top:auto;border-top:1px solid #bbb;padding:20px 24px 25px;background:#ededeb}.cart-footer[hidden]{display:none}.cart-total{display:flex;justify-content:space-between;font-family:"Archivo Black";font-size:20px;margin-bottom:16px}.checkout-button{width:100%;border:0;background:var(--red);color:white;padding:17px 20px;display:flex;justify-content:space-between;font-weight:700;letter-spacing:.12em;cursor:pointer}.cart-footer small{display:block;text-align:center;margin-top:10px;color:#666}.quick{border:0;cursor:pointer}.quick:focus-visible{opacity:1;transform:none}
+@media(max-width:700px){.cart-head{padding:24px 18px 18px}.cart-items{padding-inline:18px}.cart-footer{padding-inline:18px}.cart-item{grid-template-columns:78px 1fr auto}.cart-item img{width:78px;height:100px}.quick{opacity:1;transform:none;right:10px;bottom:10px}}
+.nav{mix-blend-mode:normal;background:linear-gradient(180deg,rgba(0,0,0,.72),rgba(0,0,0,.12));color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.7)}.wordmark{display:block;line-height:1;white-space:nowrap}.bag{color:#fff;background:rgba(0,0,0,.28);border-color:#fff;white-space:nowrap}.bag span{background:#fff;color:#111}.category-link{display:block;min-width:min(350px,76vw);scroll-snap-align:start}.category-link .product-card{min-width:100%;height:100%}.seller-grid{grid-template-columns:repeat(3,1fr)}
+@media(max-width:900px){.seller-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.nav{background:rgba(10,10,10,.68);backdrop-filter:blur(5px)}.wordmark{font-size:23px}.bag{padding:9px 12px}.seller-grid{display:flex}}
+.hero-copy p{color:#fff!important;font-weight:600;text-shadow:none}
+@media(max-width:700px){.hero-copy p{color:#fff!important;background:rgba(0,0,0,.28);text-shadow:none}}
+
+.nav-start,.page-nav-start{display:flex;align-items:center;gap:18px}.menu-trigger{width:42px;height:42px;border:1px solid rgba(255,255,255,.8);border-radius:50%;background:rgba(0,0,0,.22);display:grid;align-content:center;justify-content:center;gap:4px;cursor:pointer;padding:0}.menu-trigger span{display:block;width:17px;height:1.5px;background:#fff}.menu-trigger.dark{border-color:#111;background:transparent}.menu-trigger.dark span{background:#111}.menu-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.58);z-index:90;opacity:0;transition:opacity .3s}.menu-backdrop.show{opacity:1}.site-menu{position:fixed;left:0;top:0;bottom:0;width:min(560px,92vw);z-index:91;background:#f2f2ef;color:#0a0a0a;padding:30px 38px 24px;transform:translateX(-105%);transition:transform .38s cubic-bezier(.22,.8,.2,1);display:flex;flex-direction:column;overflow:auto}.site-menu.open{transform:none}.menu-top{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #bbb;padding-bottom:23px}.menu-top>a{font-family:"Archivo Black",sans-serif;font-size:34px;letter-spacing:-.06em;color:inherit;text-decoration:none}.menu-close{width:43px;height:43px;border:1px solid #111;border-radius:50%;background:transparent;font-size:28px;line-height:1;cursor:pointer}.menu-kicker{font-size:11px;font-weight:700;letter-spacing:.16em;margin:54px 0 22px}.menu-links{display:grid}.menu-links a{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #c7c7c7;padding:18px 0;color:inherit;text-decoration:none;font-family:"Archivo Black",sans-serif;font-size:clamp(23px,4vw,38px);line-height:1}.menu-links a:last-child{border-bottom:1px solid #c7c7c7}.menu-links b{color:#b31219;font-size:22px}.menu-secondary{display:grid;gap:14px;margin-top:38px}.menu-secondary a{color:inherit;text-decoration:none;font-size:13px;font-weight:700;letter-spacing:.1em}.menu-bottom{margin-top:auto;padding-top:50px;display:flex;justify-content:space-between;font-size:10px;font-weight:700;letter-spacing:.13em}@media(max-width:700px){.nav-start{gap:10px}.nav-start .wordmark{font-size:20px}.menu-trigger{width:37px;height:37px}.page-nav-start{gap:8px}.site-menu{padding:22px 20px 18px}.menu-top>a{font-size:29px}.menu-kicker{margin-top:42px}.menu-links a{font-size:24px;padding:16px 0}}
+</style>
+<link rel="stylesheet" href="store.css?v=6"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23b31219%27/%3E%3Ctext x=%276%27 y=%2725%27 fill=%27white%27 font-size=%2727%27 font-family=%27Arial%27 font-weight=%27bold%27%3EA%3C/text%3E%3C/svg%3E"></head>
+<body>
+  <div class="announcement">FREE DELIVERY ACROSS PAKISTAN — DROP 001 LIVE NOW</div>
+  <nav class="nav">
+    <div class="nav-start"><button class="menu-trigger" aria-label="Open menu" aria-controls="siteMenu"><span></span><span></span><span></span></button><a class="wordmark" href="#top" aria-label="ANDAZZ home">ANDAZZ</a></div>
+    <div class="nav-links">
+      <a href="#shop">SHOP</a><a href="#story">STORY</a>
+    </div>
+    <button class="bag" id="bagButton" aria-label="Open shopping bag" aria-controls="cartDrawer" aria-expanded="false">BAG <span id="bagCount">0</span></button>
+  </nav>
+  <div class="menu-backdrop" hidden></div><aside class="site-menu" id="siteMenu" aria-hidden="true"><div class="menu-top"><a href="index.html">ANDAZZ</a><button class="menu-close" aria-label="Close menu">×</button></div><span class="menu-kicker">SHOP BY CATEGORIES</span><nav class="menu-links"><a href="index.html?page=collection&type=tshirts">OVERSIZED T-SHIRTS <b>↗</b></a><a href="index.html?page=collection&type=hoodies">HOODIES <b>↗</b></a><a href="index.html?page=collection&type=sweatshirts">SWEATSHIRTS <b>↗</b></a></nav><div class="menu-secondary"><a href="index.html#best-sellers">BEST SELLERS</a><a href="index.html#story">OUR STORY</a><a href="index.html">HOME</a><a href="/admin/orders">ADMIN ORDERS</a></div><div class="menu-bottom"><span>KARACHI BORN</span><span>STREET MADE</span></div></aside>
+
+  <div class="cart-backdrop" id="cartBackdrop" hidden></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping bag" aria-hidden="true">
+    <div class="cart-head"><div><span class="eyebrow">YOUR SELECTION</span><h2>SHOPPING BAG</h2></div><button class="cart-close" id="cartClose" aria-label="Close shopping bag">×</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-empty" id="cartEmpty"><strong>YOUR BAG IS EMPTY.</strong><span>Add your favourite pieces from Best Sellers.</span></div>
+    <div class="cart-footer" id="cartFooter" hidden><div class="cart-total"><span>SUBTOTAL</span><strong id="cartTotal">Rs.0</strong></div><button class="checkout-button" id="checkoutButton">CHECKOUT <span>↗</span></button><small>Shipping calculated at checkout.</small></div>
+  </aside>
+
+  <main id="top"></main>
+  <template id="homeTemplate">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">DROP 001 / 2026</span>
+        <h1>ANDAZZ</h1>
+        <p>Built for the ones who never dress basic.</p>
+      </div>
+      <picture class="hero-picture"><source media="(max-width:700px)" srcset="assets/image-1.webp"><img class="hero-responsive" fetchpriority="high" decoding="async" src="assets/image-0.webp" alt="ANDAZZ graphic oversized tee, hoodie, cargo pants and sweatshirt hanging on a rail" /></picture>
+      <a class="shop-pill" href="#shop">SHOP THE DROP <span>↗</span></a>
+      <span class="hero-note left">KARACHI<br>PAKISTAN</span>
+      <span class="hero-note right">WEAR<br>YOUR STORY</span>
+    </section>
+
+    <div class="ticker" aria-label="ANDAZZ streetwear announcement">
+      <div class="ticker-track"><section class="ticker-copy"><span>ANDAZZ</span> KARACHI BORN — STREET MADE — NO RULES — <b>ANDAZZ</b> ♛ —&nbsp;<span>ANDAZZ</span> KARACHI BORN — STREET MADE — NO RULES — <b>ANDAZZ</b> ♛ —&nbsp;</section><section class="ticker-copy" aria-hidden="true"><span>ANDAZZ</span> KARACHI BORN — STREET MADE — NO RULES — <b>ANDAZZ</b> ♛ —&nbsp;<span>ANDAZZ</span> KARACHI BORN — STREET MADE — NO RULES — <b>ANDAZZ</b> ♛ —&nbsp;</section></div>
+    </div>
+
+    <section class="categories" id="shop">
+      <div class="section-head">
+        <div><span class="eyebrow">THE COLLECTION</span><h2>CHOOSE YOUR<br>ANDAZZ.</h2></div>
+        <p>Three silhouettes. One attitude.<br>Drag to explore.</p>
+      </div>
+      <div class="rail-wrap">
+        <div class="product-rail" id="productRail">
+          <a class="category-link" href="index.html?page=collection&type=tshirts"><article class="product-card"><div class="product-shot"><span class="new-tag">NEW IN</span><img loading="lazy" decoding="async" src="assets/image-2.webp" alt="Burgundy graphic oversized T-shirt"></div><div class="product-info"><h3>OVERSIZED<br>T-SHIRTS</h3><span>01 ↗</span></div></article></a>
+          <a class="category-link" href="index.html?page=collection&type=hoodies"><article class="product-card"><div class="product-shot"><span class="new-tag">NEW IN</span><img loading="lazy" decoding="async" src="assets/image-3.webp" alt="Olive graphic oversized hoodie"></div><div class="product-info"><h3>HOODIES</h3><span>02 ↗</span></div></article></a>
+          <a class="category-link" href="index.html?page=collection&type=sweatshirts"><article class="product-card"><div class="product-shot"><span class="new-tag">NEW IN</span><img loading="lazy" decoding="async" src="assets/image-4.webp" alt="Black graphic oversized sweatshirt"></div><div class="product-info"><h3>SWEATSHIRTS</h3><span>03 ↗</span></div></article></a>
+        </div>
+        <button class="rail-next" id="railNext" aria-label="Show next category">→</button>
+      </div>
+    </section>
+
+    <section class="manifesto" id="story">
+      <div class="stamp">AUTHENTIC<br>STREETWEAR<br>EST. 2026</div>
+      <div class="manifesto-copy">
+        <span class="eyebrow">NOT JUST CLOTHES</span>
+        <h2>APNA<br><i>ANDAZZ.</i></h2>
+        <p>Not made to fit in. Made to feel like you.</p>
+      </div>
+      <div class="editorial">
+        <img loading="lazy" decoding="async" src="assets/image-5.webp" alt="Model wearing an ANDAZZ red hoodie and black cargo pants" />
+        <span>TAKE YOURS</span>
+      </div>
+    </section>
+
+    <section class="best-sellers" id="best-sellers">
+      <div class="best-head">
+        <div>
+          <span class="eyebrow">MOST WANTED / DROP 001</span>
+          <h2>BEST SELLERS</h2>
+        </div>
+        <a href="#shop">VIEW ALL <span>↗</span></a>
+      </div>
+      <div class="collection-tabs" aria-label="Best seller collections">
+        <button class="active">GRUNGE COLLECTION</button>
+        <button>EVERYDAY ESSENTIALS</button>
+      </div>
+      <div class="seller-grid">
+        <article class="seller-card">
+          <a class="seller-image" href="index.html?page=product&id=olive-chaos-hoodie"><span class="save">SAVE RS.650</span><img loading="lazy" decoding="async" src="assets/image-6.webp" alt="Olive Chaos hoodie design board with model, close-up details and product preview"><span class="quick">VIEW DETAILS</span></a>
+          <div class="seller-meta"><h3>OLIVE CHAOS HOODIE</h3><div><strong>Rs.3,850</strong><del>Rs.4,500</del></div></div>
+        </article>
+        <article class="seller-card">
+          <a class="seller-image" href="index.html?page=product&id=noir-signal-sweat"><span class="save">SAVE RS.450</span><img loading="lazy" decoding="async" src="assets/image-7.webp" alt="Noir Signal sweatshirt design board with model, close-up details and product preview"><span class="quick">VIEW DETAILS</span></a>
+          <div class="seller-meta"><h3>NOIR SIGNAL SWEAT</h3><div><strong>Rs.3,250</strong><del>Rs.3,700</del></div></div>
+        </article>
+        <article class="seller-card">
+          <a class="seller-image" href="index.html?page=product&id=afterdark-tee"><span class="save">SAVE RS.350</span><img loading="lazy" decoding="async" src="assets/image-8.webp" alt="Afterdark oversized T-shirt design board with model, close-up details and product preview"><span class="quick">VIEW DETAILS</span></a>
+          <div class="seller-meta"><h3>AFTERDARK OVERSIZED TEE</h3><div><strong>Rs.2,150</strong><del>Rs.2,500</del></div></div>
+        </article>
+      </div>
+      <div class="seller-values">
+        <span>✦ HEAVYWEIGHT FABRIC</span><span>✦ UNISEX STREET FIT</span><span>✦ MADE IN PAKISTAN</span>
+      </div>
+    </section>
+
+    <section class="drop-banner">
+      <img loading="lazy" decoding="async" src="assets/image-9.webp" alt="A stack of folded ANDAZZ graphic streetwear" />
+      <div class="drop-copy">
+        <span class="eyebrow">EVERYDAY UNIFORM / DROP 001</span>
+        <h2>STACK YOUR<br><i>STORY.</i></h2>
+        <p>Heavyweight cotton. Loose silhouettes.<br>Made to be worn your way.</p>
+        <a href="#shop">EXPLORE THE DROP <span>↗</span></a>
+      </div>
+    </section>
+  </template>
+
+  <footer class="tv-footer" hidden>
+    <img loading="lazy" decoding="async" class="footer-desktop" src="assets/image-10.webp" alt="An oversized ANDAZZ T-shirt hanging in front of a retro television displaying ANDAZZ" />
+    <img loading="lazy" decoding="async" class="footer-mobile" src="assets/image-11.webp" alt="An oversized ANDAZZ T-shirt hanging beside a retro television displaying ANDAZZ" />
+    <div class="tv-footer-top"><span>ANDAZZ® / KARACHI</span><span>EST. 2026</span></div>
+    <div class="tv-footer-copy">
+      <span class="eyebrow">LOUD BY DESIGN</span>
+      <h2>WEAR YOUR<br><i>ANDAZZ.</i></h2>
+    </div>
+    <div class="tv-footer-links"><a href="#shop">SHOP</a><a href="#">INSTAGRAM</a><a href="#">CONTACT</a><span>© 2026 ANDAZZ</span></div>
+  </footer>
+  <script src="app.js?v=6" defer></script>
+</body>
+</html>
